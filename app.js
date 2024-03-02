@@ -14,3 +14,18 @@ function countDown(num) {
     }, 
     1000);
 }
+
+function randomGame() {
+    let count = 0;
+    let random = -1;
+
+    const IntervalID_timer = setInterval(function() {
+        count++;
+        random = Math.random();
+
+        if(random > 0.75) {
+            clearInterval(IntervalID_timer);
+            console.log(`Number of tries: ${count}`);
+        }
+    }, 1000);
+}
